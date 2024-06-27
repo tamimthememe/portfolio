@@ -24,8 +24,8 @@ const Canvas = ({ children }) => {
 
   return (
     <div className="flex m-auto w-[100%] md:h-[100%] items-center">
-      <div className="rounded-md m-auto bg-black-300 w-full flex max-md:w-full ">
-        {!true ? (
+      <div className="rounded-md m-auto bg-black-300 w-full flex max-md:w-full h-full">
+        {!loader? (
           <Loader timeline={timeline} />
         ) : (
           <div className="w-full ">

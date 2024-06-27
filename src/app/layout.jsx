@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="">
-        <Canvas children={children} />
+        <Canvas>{children}</Canvas>
       </body>
     </html>
   );
