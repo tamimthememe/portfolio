@@ -72,7 +72,7 @@ const Sidebar = () => {
           {socials.map((item,index)=>(
             <div key={index} className="mx-2 pl-4 py-2 hover:bg-black-200 rounded-md">
               <a target="_blank" href={item.url} className="flex gap-4 items-center">
-                <Image src={item.icon} width={25}/>
+                <Image src={item.icon} width={25} alt={`${item.title} icon`}/>
                 <h3 className="text-sm">{item.title}</h3>
               </a>
               </div>

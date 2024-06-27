@@ -80,8 +80,8 @@ export default function Home() {
   }, []);
 
   return (
-    <section className=" relative overflow-hidden">
-      <div className="px-20 py-[3.5em] max-md:px-6 max-md:py-[2em] flex flex-col justify-between h-[100vh]">
+    <section className="relative overflow-hidden">
+      <div className="px-20 py-[3.5em] max-md:px-6 max-md:py-[2em] flex flex-col justify-between md:h-[100vh]">
         <div>
           <h1
             ref={headerRef}
