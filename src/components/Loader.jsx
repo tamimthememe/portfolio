@@ -25,7 +25,7 @@ const Loader = ({ timeline }) => {
   }, [timeline]);
 
   return (
-    <div className="relative w-full max-md:h-[100vh]">
+    <div className="relative w-full h-[100vh]">
       <div className="w-full h-full flex justify-center items-center">
         <div className="relative w-[8em] h-[15em] overflow-hidden">
           <div className="absolute h-[6.5em] w-full bg-black-300 z-10 opacity-70" />
