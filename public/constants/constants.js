@@ -1,5 +1,5 @@
 import home from "../assets/icons/home.png";
-import about from "../assets/icons/About.png";
+import about from "../assets/icons/about.png";
 import projects from "../assets/icons/projects.png";
 import github from "../assets/icons/GitHub.png";
 import linkedin from "../assets/icons/LinkedIn.png";
@@ -100,17 +100,17 @@ export const heroShortcuts = [
   {
     hook: "Get to see modern and aesthetic websites on this portfolio.",
     desc: "Click here to teleport to the projects page.",
-    url: '/projects'
+    url: "/projects",
   },
   {
     hook: "Don’t Know me ?",
     desc: "Get to know about me and my life journey in the about page.",
-    url: '/about'
+    url: "/about",
   },
   {
     hook: "Wondering how I made this portfolio website?",
     desc: "Check Out the source Code of this Website here",
-    url: '/'
+    url: "/",
   },
 ];
 
