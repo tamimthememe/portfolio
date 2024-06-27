@@ -1,5 +1,6 @@
 import "./globals.css";
 import Canvas from "@/components/Canvas";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "tamim.dev()",
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="">
         <Canvas>{children}</Canvas>
+        <Analytics />
       </body>
     </html>
   );
