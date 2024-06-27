@@ -6,11 +6,36 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      'rubik': ["Rubik", "sans-serif"],
+      'scp': ['"Source Code Pro"', "sans-serif"],
+      'ds': ['"Dancing Script"', "sans-serif"],
+    },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        primary: "#1E211F",
+        gray: {
+          100: "#D9D9D9",
+          200: "#9C9C9C",
+          300: "#EAEAEA",
+          400: "#9C9C9C",
+          500: "#919191",
+          600: "#CECECE",
+          700: '#181818'
+        },
+        black: {
+          100: "#1A1A1A",
+          200: "#161515",
+          300: "#101010",
+        },
+        purple: {
+          100: "#AC6AFF",
+          200: "#5752C2",
+          300: "#210940",
+        },
+        blue: {
+          100: "#002E42",
+        },
       },
     },
   },
