@@ -20,6 +20,8 @@ const About = () => {
   const mainRef = useRef();
   const latestRef = useRef();
 
+  let count = 0;
+
   const [toggle, setToggle] = useState(true);
   const [filter, setFilter] = useState("Live Site");
   const [opened, setOpened] = useState("");
@@ -74,8 +76,53 @@ const About = () => {
         end: "bottom 15%",
       },
     });
-
   }, []);
+
+  const renderItems = () => {
+    let count = 0;
+
+    return work.map((item, index) => {
+      if (item.category === filter && item.icon && count < 4) {
+        count++;
+
+        return (
+          <div
+            key={index}
+            className="my-4 px-4 py-2 rounded-lg cursor-pointer hover:bg-black-100 bg-gray-700 transition-all"
+            onClick={() => {
+              if (opened != item.name) {
+                setOpened(item.name);
+              } else {
+                setOpened(" ");
+              }
+            }}
+          >
+            <div className="flex items-center  ">
+              <div className="flex items-center p-3 w-[3.5em] h-[3.5em]">
+                <Image src={item.icon} width={item.width} alt="icon" />
+              </div>
+              <div className="ml-2">
+                <p>{item.name}</p>
+                <p className="max-md:hidden text-[13px] text-gray-400">
+                  {item.sub}
+                </p>
+              </div>
+            </div>
+
+            {item.name === opened && (
+              <div className="my-2 mx-auto w-[90%] bg-black-300 p-3 rounded-lg flex gap-3 flex-wrap">
+                {item.tech.map((techItem, i) => (
+                  <div key={i} className="bg-black-100 px-2 py-1 rounded-md">
+                    <p className="text-sm">{techItem}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        );
+      }
+    });
+  };
 
   return (
     <section className="w-full h-full ">
@@ -103,53 +150,7 @@ const About = () => {
                 }}
               />
             </div>
-            <div className="mb-20">
-              {work.map(
-                (item, index) =>
-                  item.category === filter && (
-                    <div
-                      key={index}
-                      className="my-4 px-4 py-2 rounded-lg cursor-pointer hover:bg-black-100 bg-gray-700 transition-all"
-                      onClick={() => {
-                        if (opened != item.name) {
-                          setOpened(item.name);
-                        } else {
-                          setOpened(" ");
-                        }
-                      }}
-                    >
-                      <div className="flex items-center  ">
-                        <div className="flex items-center p-3 w-[3.5em] h-[3.5em]">
-                          <Image
-                            src={item.icon}
-                            width={item.width}
-                            alt="icon"
-                          />
-                        </div>
-                        <div className="ml-2">
-                          <p>{item.name}</p>
-                          <p className="max-md:hidden text-[13px] text-gray-400">
-                            {item.sub}
-                          </p>
-                        </div>
-                      </div>
-
-                      {item.name === opened && (
-                        <div className="my-2 mx-auto w-[90%] bg-black-300 p-3 rounded-lg flex gap-3 flex-wrap">
-                          {item.tech.map((techItem, i) => (
-                            <div
-                              key={i}
-                              className="bg-black-100 px-2 py-1 rounded-md"
-                            >
-                              <p className="text-sm">{techItem}</p>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  )
-              )}
-            </div>
+            <div className="mb-20">{renderItems()}</div>
           </div>
           <div ref={knowRef} className="scale-75 origin-left">
             <h3 id="know" className="page-sub mb-5  origin-left">

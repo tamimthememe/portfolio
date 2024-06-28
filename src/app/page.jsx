@@ -19,27 +19,27 @@ export default function Home() {
     tl.add(
       gsap.to(headerRef.current, {
         y: 0,
-        duration: 2,
+        duration: 1,
         opacity: 1,
         ease: "power3.inOut",
       }),
       gsap.to("#headerCircle", {
         y: 0,
-        duration: 2,
+        duration: 1,
         ease: "power3.inOut",
       })
     );
 
     tl.to(subheaderRef.current, {
       y: 0,
-      duration: 2,
+      duration: 1,
       opacity: 1,
       ease: "power3.inOut",
     }).to(
       "#subheaderCircle",
       {
         y: 0,
-        duration: 2,
+        duration: 1,
         ease: "power3.inOut",
       },
       "<"
@@ -48,14 +48,14 @@ export default function Home() {
     tl.to("#shortcut", {
       opacity: 1,
       x: 0,
-      duration: 2,
+      duration: 1,
       ease: "power3.inOut",
       stagger: -0.5,
     }).to(
       "#right",
       {
         x: 0,
-        duration: 2,
+        duration: 1,
         stagger: 0.75,
         opacity: 1,
         ease: "power3.inOut",
@@ -65,14 +65,14 @@ export default function Home() {
 
     tl.to(bottomRef.current, {
       y: 0,
-      duration: 2,
+      duration: 1,
       opacity: 1,
       ease: "power3.inOut",
     }).to(
       "#bottom",
       {
         y: 0,
-        duration: 2,
+        duration: 1,
         ease: "power3.inOut",
       },
       "<"
@@ -87,8 +87,8 @@ export default function Home() {
             ref={headerRef}
             className=" -translate-y-40 opacity-0 xl:text-[80px] md:text-[60px] leading-[1.3em] max-md:text-[60px] max-md:w-full"
           >
-            Hi! I enjoy creating <br/><span className="font-ds ">Modern</span>{" "}
-            Websites.
+            Hi! I enjoy creating <br />
+            <span className="font-ds ">Modern</span> Websites.
           </h1>
           <p
             ref={subheaderRef}

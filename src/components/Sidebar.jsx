@@ -20,7 +20,7 @@ const Sidebar = () => {
         x: 0,
         duration: 2,
         ease: "expo.inOut",
-        delay: 8,
+        delay: 4,
       });
     } else{
       gsap.to(sidebarRef.current, {
