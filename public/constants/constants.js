@@ -131,7 +131,7 @@ export const work = [
     icon: tamimDev,
     date: "June 2024",
     width: 35,
-    tech: ["HTML", "Tailwind CSS", "React", "GSAP", "Vercel"],
+    tech: ["Next.js", "HTML", "Tailwind CSS", "React", "GSAP", "Vercel"],
     mockup: tamimDevMockup,
     background: "../assets/images/gradients/gray-gradient.png",
     longDesc:
